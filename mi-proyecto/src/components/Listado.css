@@ -1,11 +1,5 @@
-.listado {
-  width: 100%;
-}
-
-.titulo-listado {
-  text-align: center;
-  color: white;
-  font-weight: 800;
-  font-size: 22px;
-  margin-bottom: 20px;
+.listado-citas {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }

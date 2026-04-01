@@ -1,8 +1,10 @@
+import "./Header.css";
+
 function Header() {
   return (
     <div className="header">
-      <h1>CREAR MI CITA</h1>
-      <h1>ADMINISTRA TUS CITAS</h1>
+      <h2>Crear mi cita</h2>
+      <h2>Administra tus citas</h2>
     </div>
   );
 }

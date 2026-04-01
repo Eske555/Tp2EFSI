@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header h2 {
+  flex: 1;
+  padding: 1rem 0 0;
+}

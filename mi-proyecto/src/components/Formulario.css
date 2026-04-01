@@ -1,37 +1,64 @@
 .formulario {
-  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .formulario label {
+  display: block;
+  margin-bottom: 6px;
   color: white;
   font-weight: bold;
   font-size: 14px;
-  margin-bottom: 5px;
 }
 
-.formulario input,
+.formulario input[type="text"],
+.formulario input[type="date"],
+.formulario input[type="time"],
 .formulario textarea {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 5px;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 6px;
   border: none;
   font-size: 14px;
+  width: 100%;
+  background: white;
+  color: #aaa;
+}
+
+.formulario input[type="date"],
+.formulario input[type="time"] {
+  height: 46px;
+  color: #333;
 }
 
 .formulario textarea {
-  height: 80px;
-  resize: none;
+  height: 100px;
+  resize: vertical;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+button {
+  box-shadow: none;
+  outline: none;
 }
 
 .formulario button {
-  background-color: #4cc9f0;
+  background-color: #00bcd4;
   border: none;
-  padding: 12px;
+  outline: none;
+  padding: 14px;
   color: white;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
+  width: 100%;
+  display: block;
+}
+
+.formulario button:hover {
+  background-color: #0097a7;
 }

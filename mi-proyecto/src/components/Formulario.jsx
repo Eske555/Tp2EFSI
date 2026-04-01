@@ -1,29 +1,39 @@
-function Formulario() {
+import { useState } from "react";
+import "./Formulario.css";
+
+function Formulario({ agregarCita }) {
+  const [mascota, setMascota] = useState("");
+  const [dueño, setDueño] = useState("");
+  const [fecha, setFecha] = useState("");
+  const [hora, setHora] = useState("");
+  const [sintomas, setSintomas] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!mascota || !dueño || !fecha || !hora || !sintomas) return;
+    agregarCita({ mascota, dueño, fecha, hora, sintomas });
+    setMascota(""); setDueño(""); setFecha(""); setHora(""); setSintomas("");
+  };
+
   return (
-    <div className="one-half column">
-      <h2>Crear mi cita</h2>
+    <form className="formulario" onSubmit={handleSubmit}>
+      <label>Nombre Mascota</label>
+      <input type="text" placeholder="Nombre Mascota" value={mascota} onChange={(e) => setMascota(e.target.value)} />
 
-      <form>
-        <label>Nombre Mascota</label>
-        <input type="text" className="u-full-width" />
+      <label>Nombre Dueño</label>
+      <input type="text" placeholder="Nombre dueño de la mascota" value={dueño} onChange={(e) => setDueño(e.target.value)} />
 
-        <label>Nombre Dueño</label>
-        <input type="text" className="u-full-width" />
+      <label>Fecha</label>
+      <input type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} />
 
-        <label>Fecha</label>
-        <input type="date" className="u-full-width" />
+      <label>hora</label>
+      <input type="time" value={hora} onChange={(e) => setHora(e.target.value)} />
 
-        <label>Hora</label>
-        <input type="time" className="u-full-width" />
+      <label>Síntomas</label>
+      <textarea value={sintomas} onChange={(e) => setSintomas(e.target.value)} />
 
-        <label>Sintomas</label>
-        <textarea className="u-full-width"></textarea>
-
-        <button className="u-full-width button-primary">
-          Agregar Cita
-        </button>
-      </form>
-    </div>
+      <button type="submit">Agregar Cita</button>
+    </form>
   );
 }
 
