@@ -1,12 +1,15 @@
 import Cita from "./Cita";
-import "./Listado.css";
 
 function Listado({ citas }) {
   return (
-    <div className="listado">
-      {citas.map((cita, index) => (
-        <Cita key={index} cita={cita} />
-      ))}
+    <div className="one-half column">
+      <h2>Administra tus citas</h2>
+
+      <div className="lista-citas">
+        {citas.map((cita, index) => (
+          <Cita key={index} cita={cita} />
+        ))}
+      </div>
     </div>
   );
 }
