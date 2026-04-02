@@ -9,7 +9,6 @@ function ListaCita() {
     { mascota: "Sifon", dueno: "Flecha", fecha: "2023-08-05", hora: "09:24", sintomas: "Duerme mucho" },
     { mascota: "Floki", dueno: "Ari", fecha: "2023-08-05", hora: "16:15", sintomas: "No está comiendo" }
   ]);
-
   return (
     <div className="one-half column lista-citas">
       <Titulo texto="Administra tus citas" tipo="h2" />
